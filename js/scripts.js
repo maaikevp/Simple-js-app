@@ -2,7 +2,7 @@
 
 let pokemonRepository = (function() {
     let repository = [
-      { name: "vulpix", height: 2, type: "fire" },
+      { name: "vulpix", height: 2, type: ["fire"] },
       { name: "lapras", height: 8, type: ["water", "ice"] },
       { name: "skitty", height: 2, type: ["normal"]
       }];
@@ -30,7 +30,19 @@ let pokemonRepository = (function() {
       button.classList.add("button-class");
       listpokemon.appendChild(button);
       pokemonList.appendChild(listpokemon); 
-      
+      button.addEventListener("click", function () {
+        showDetails(pokemon); // Call the showDetails 
+      });
+    }
+
+    function showDetails(pokemon) {
+      console.log("Name: " + pokemon.name);
+      // console.log("Height: " + pokemon.height);
+      // console.log("Types: " + pokemon.types.join(", "));
+      // You can add more details as needed
+    }
+
+
     return {
       add: add,
       getAll: getAll,
@@ -47,10 +59,4 @@ let pokemonRepository = (function() {
   });
 
 
-// add EventListener
 
-// button.addEventListener('click', function (event) {
-//     console.log(event)
-// });
-
-// button.addEventListener('click', showDetails(pokemon));
