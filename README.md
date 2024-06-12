@@ -1,4 +1,4 @@
-# Overview
+## Overview
 
 
 A simple Pokedex (Pokemon look-up app) with details and images of the first 150 Pokemon is written in Javascript.
